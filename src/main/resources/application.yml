@@ -1,6 +1,13 @@
 micronaut:
   application:
     name: mncache
+  caches:
+    sample:
+      charset: UTF-8
+    suspended:
+      charset: UTF-8
+    suspended2:
+      charset: UTF-8
 netty:
   default:
     allocator:
