@@ -11,6 +11,7 @@ group = "fi.monad.mncache"
 
 val kotlinVersion=project.properties.get("kotlinVersion")
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -20,9 +21,12 @@ dependencies {
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
+    implementation("io.micronaut.kotlin:micronaut-kotlin-extension-functions")
     implementation("jakarta.annotation:jakarta.annotation-api")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4")
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
 
